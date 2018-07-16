@@ -14,7 +14,7 @@ func pop(a []interface{}) (interface{}, []interface{}) {
 }
 
 //is index nil type
-func isnil(v int) bool {
+func isNil(v int) bool {
 	return v == nilIndex
 }
 

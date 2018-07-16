@@ -36,7 +36,7 @@ func (hp *Heap) SinkDown(index int) {
 
 			var temp_element interface{}
 			//update swap_index candidate, with elemscore || ch1score
-			if isnil(swap_index) {
+			if isNil(swap_index) {
 				temp_element = element
 			} else {
 				temp_element = child1
@@ -54,7 +54,7 @@ func (hp *Heap) SinkDown(index int) {
 			}
 		}
 		// No need to swap_index further
-		if isnil(swap_index) {
+		if isNil(swap_index) {
 			found = true
 		} else {
 			// swap_index and continue.

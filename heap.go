@@ -32,8 +32,10 @@ func NewHeap(comparator cmp.Compare, heapType ...*HeapType) *Heap {
 
 //Clone heap
 func (hp *Heap) Clone() *Heap {
-	content := make([]interface{}, len(hp.content))
-	copy(content, hp.content)
+	content := make([]interface{}, 0,  len(hp.content))
+	for i := range hp.content{
+		content = append(content, hp.content[i])
+	}
 	return &Heap{
 		htype:   hp.htype.Clone(),
 		content: content,

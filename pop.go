@@ -9,7 +9,7 @@ func (hp *Heap) Pop() interface{}{
 	}
 	var end interface{}
 	// store for return later
-	result := hp.content[0]
+	var result = hp.content[0]
 	end, hp.content = pop(hp.content)
 	// if size > 0 , insert end at index 0, let it sink
 	if !hp.IsEmpty() {
