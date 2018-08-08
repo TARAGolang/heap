@@ -45,8 +45,8 @@ func TestHeap(t *testing.T) {
 
 			fmt.Println(data)
 
-			var minQueue = make([]float64, 0)
-			var maxQueue = make([]float64, 0)
+			var minQueue []float64
+			var maxQueue []float64
 
 			for minHeap.Size() > 0 {
 				minQueue = append(minQueue, float64(minHeap.Pop().(float64)))

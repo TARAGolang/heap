@@ -3,7 +3,6 @@ package heap
 //BubbleUp - swaps element at index with parent upward the heap
 //param index {Number} - integer index
 func (hp *Heap) BubbleUp(index int) {
-
 	var element = hp.content[index]
 	var found = false
 
