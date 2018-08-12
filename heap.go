@@ -1,4 +1,3 @@
-
 package heap
 
 import "github.com/intdxdt/cmp"
@@ -32,8 +31,8 @@ func NewHeap(comparator cmp.Compare, heapType ...*HeapType) *Heap {
 
 //Clone heap
 func (hp *Heap) Clone() *Heap {
-	content := make([]interface{}, 0,  len(hp.content))
-	for i := range hp.content{
+	content := make([]interface{}, 0, len(hp.content))
+	for i := range hp.content {
 		content = append(content, hp.content[i])
 	}
 	return &Heap{
@@ -51,4 +50,9 @@ func (hp *Heap) Size() int {
 //IsEmpty - checks heap emptiness
 func (hp *Heap) IsEmpty() bool {
 	return hp.Size() == 0
+}
+
+//data view
+func (hp *Heap) View() []interface{} {
+	return hp.content
 }

@@ -32,6 +32,9 @@ func TestHeap(t *testing.T) {
 
 		g.It("should test items in the heap as queue", func() {
 			var minHeapClone = minHeap.Clone()
+			g.Assert(len(minHeap.View()) ).Equal(len(data))
+			g.Assert(len(maxHeap.View()) ).Equal(len(data))
+			g.Assert(len(minHeapClone.View()) ).Equal(len(data))
 
 			//, 'max heap desc sort'
 			g.Assert(minHeap.Peek()).Eql(0.)
