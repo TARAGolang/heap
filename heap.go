@@ -24,7 +24,7 @@ func NewHeap(comparator cmp.Compare, heapType ...*HeapType) *Heap {
 	}
 	return &Heap{
 		htype:   htype,
-		content: make([]interface{}, 0, 25),
+		content: make([]interface{}, 0, 32),
 		cmp:     comparator,
 	}
 }
